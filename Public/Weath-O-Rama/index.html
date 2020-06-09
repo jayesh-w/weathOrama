@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weath-O-Rama</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+</head>
+<body>
+    <div class="container" id="index">
+        <!-- <h2 class='index'>Welcome To </h2> -->
+        <h2 class='index'>Weath-O-Rama</h2>
+        <p class='index' id="p">A probability based weather app.</p>
+        <!-- <button>Get Started</button> -->
+        <center class='index' id='button'><a href="./login.html"><button class='btn btn--style'>Get Started</button></a></center>
+    </div>
+    
+       
+    
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <!-- load barba (UMD version) -->
+     <script src="https://unpkg.com/@barba/core"></script>
+     <!-- load gsap animation library (minified version) -->
+     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+     <script src="./js/softripple.js"></script>
+     <script>
+         // GSAP Animations
+         const buttons = document.querySelectorAll('.btn');
+         const rippleOptions = {
+             transitionDuration: 1,
+             rippleMaxSize: 150,
+             randomSize: true
+         };
+         SoftRipple(buttons,rippleOptions);
+
+
+     </script>
+</body>
+</html>
