@@ -10,10 +10,11 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const csrfProtection = require('csurf')();
 
 // All Requirements
+const mainRoutes = require('./Routes/mainRoutes');
 
 // SET THE DEFAULT VIEW ENGINE ==> EJS
 app.set('view engine', 'ejs');
-app.set('views', 'Views');
+app.set('views', 'views');
 
 /// SET bodyParser urlencoded to false
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,9 +41,12 @@ app.use(csrfProtection);
 //// local usage variables in ejs
 app.use((req, res, next) => {
     res.locals.csrfToken = req.csrfToken();
+    next();
 });
 
 /// SET THE GENERAL ROUTES
+
+app.use(mainRoutes);
 
 
 /// connect Mongodb
