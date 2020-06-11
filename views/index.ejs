@@ -1,13 +1,16 @@
 <%- include('./includes/head.ejs') %>
 <title>Weath-O-Rama</title>
 </head>
-<body>
-    <div class="container" id="index">
-        <!-- <h2 class='index'>Welcome To </h2> -->
-        <h2 class='index'>Weath-O-Rama</h2>
-        <p class='index' id="p">A probability based weather app.</p>
-        <!-- <button>Get Started</button> -->
-        <center class='index' id='button'><a href="./login.html"><button class='btn btn--style'>Get Started</button></a></center>
+<body scroll="no" style="overflow: hidden">
+    <div class="main">
+        <%- include('./includes/preloader.ejs') %>
+        <div class="container" id="index">
+            <h2 class='index'>Welcome To </h2>
+            <h2 class='index'>Weath-O-Rama</h2>
+            <p class='index' id="p">A probability based weather app.</p>
+            <!-- <button>Get Started</button> -->
+            <center class='index' id='button'><a href="./login.html"><button class='btn btn--style'>Get Started</button></a></center>
+        </div>
     </div>
 
     <%- include('./includes/tail.ejs') %>
